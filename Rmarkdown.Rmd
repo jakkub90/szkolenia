@@ -1,21 +1,22 @@
 ---
-title: "R Markdown"
+title: "R Markdown - wprowadzenie"
 author: "Jakub Kubiak"
 date: "20 marca 2018"
 output:
-  pdf_document: default
   html_document: default
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=TRUE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+W tym kursie przedstawiê podstawy tworzenia raportów z wykorzystaniem R Markdown <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+Powy¿ej ustawiliœmy **knitr::opts_chunk$set(echo = TRUE)** aby dodaæ kod R w raporcie
+
+
 
 ```{r cars}
 summary(cars)
@@ -25,7 +26,7 @@ summary(cars)
 
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
+```{r pressure, echo=TRUE}
 plot(pressure)
 ```
 
