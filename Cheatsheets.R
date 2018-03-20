@@ -10,6 +10,8 @@
 
 # https://github.com/mi2-warsaw/SER/tree/master/OtwartaStatystyka
 
+library(rmarkdown)
+render("Rmarkdown.Rmd")
 
 rm(list = ls())
 .libPaths("D:/Dysk R/R_library")

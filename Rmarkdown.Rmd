@@ -14,7 +14,24 @@ knitr::opts_chunk$set(echo = TRUE)
 
 W tym kursie przedstawiê podstawy tworzenia raportów z wykorzystaniem R Markdown <http://rmarkdown.rstudio.com>.
 
-Powy¿ej ustawiliœmy **knitr::opts_chunk$set(echo = TRUE)** aby dodaæ kod R w raporcie
+Tworzenie raportu zaczynamy od za³¹czenia pakietu rmarkdown: **library(rmarkdown)**.
+
+Nastêpnie mamy dwie mo¿liwoœci stworzenia raportu: 
+
+* korzystamy z w pasku zadañ: Knit -> Knit to HTML
+* korzystamy z funkcji: render("nazwa_raportu.Rmd")  
+
+![](Rmarkdown/Przechwytywanie.png)  
+
+
+
+Struktura raportu sk³ada siê z 3 czêœci:
+
+* opcjonalny nag³ówek ograniczony przez **---** (nag³ówek YAML)
+* kod R otoczony przez **```**
+* zwyk³y sformatowany tekst
+
+Powy¿ej ustawiliœmy **echo = TRUE**. Powoduje to dodanie kodu R w raporcie.
 
 
 
