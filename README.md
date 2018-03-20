@@ -1,1 +1,1 @@
-# szkolenia
+# repozytorium przeznaczone do szkolenia
