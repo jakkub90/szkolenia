@@ -10,6 +10,11 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
+```{r, echo=FALSE}
+rm(list = ls())
+.libPaths("D:/Dysk R/R_library")
+```
 ## R Markdown
 
 W tym kursie przedstawiê podstawy tworzenia raportów z wykorzystaniem R Markdown <http://rmarkdown.rstudio.com>.
