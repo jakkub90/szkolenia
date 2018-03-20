@@ -8,11 +8,32 @@
 ## ggplot2
 ## dplyr
 
+# https://github.com/mi2-warsaw/SER/tree/master/OtwartaStatystyka
+
 
 rm(list = ls())
 .libPaths("D:/Dysk R/R_library")
 setwd("D:\\Dysk R\\+cheatsheets")
 system('open "D:/Dysk R/+cheatsheets"')
+
+
+analiza <- function(x){
+  return(list(podsumowanie = summary(x), 
+              struktura = str(x),
+              klasa = class(x), 
+              typ_danych = typeof(x), 
+              tryb = mode(x), 
+              d³ugoœæ = length(x), 
+              atrybuty = attributes(x)))
+}
+
+analiza(mtcars)
+
+message("aaa")
+warning("aaa")
+
+sessionInfo()
+R.Version()
 
 ##### 1. base-r  #####
 
