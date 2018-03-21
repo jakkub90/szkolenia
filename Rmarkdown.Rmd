@@ -6,18 +6,20 @@ output:
   html_document: default
 ---
 
-```{r setup, include=TRUE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 
-```{r, echo=FALSE}
+```{r wprowadzenie, echo=FALSE}
 rm(list = ls())
 .libPaths("D:/Dysk R/R_library")
 ```
 ## R Markdown
 
 W tym kursie przedstawiê podstawy tworzenia raportów z wykorzystaniem R Markdown <http://rmarkdown.rstudio.com>.
+
+## Wprowadzenie
 
 Tworzenie raportu zaczynamy od za³¹czenia pakietu rmarkdown: **library(rmarkdown)**.
 
@@ -28,7 +30,7 @@ Nastêpnie mamy dwie mo¿liwoœci stworzenia raportu:
 
 ![](Rmarkdown/Przechwytywanie.png)  
 
-
+## Struktura (types of content)
 
 Struktura raportu sk³ada siê z 3 czêœci:
 
@@ -36,20 +38,80 @@ Struktura raportu sk³ada siê z 3 czêœci:
 * kod R otoczony przez **```**
 * zwyk³y sformatowany tekst
 
-Powy¿ej ustawiliœmy **echo = TRUE**. Powoduje to dodanie kodu R w raporcie.
+
+## Opcje (Chunk Options)
+
+Kod R mo¿e byæ spersonalizowany u¿ywaj¹c opcji **knitr**. Wstawia siê je w nag³ówku kodu u¿ywaj¹c {}. Przyjmuj¹ nastêpuj¹ce argumenty:
+
+* include = FALSE    zapobiega pojawieniu siê w skoñczonym pliku zarówno kodu jak i rezultatów kodu. Mimo to R Markdown uruchamia ten kod i umo¿liwia jego wykorzystanie w póŸniejszych fragmentach kodu.
+* echo = FALSE       zapobiega pojawieniu siê kodu w skoñczonym pliku. 
+* message = FALSE    zapobiega pojawieniu siê wiadomoœci generowanej przez plik
+* warning = FALSE    zapobiega pojawieniu siê ostrze¿eñ generowanych przez kod
+* fig.cap = "..."    dodaje podpis do wygenerowanych obrazów 
 
 
+## Opcje globalne
 
-```{r cars}
-summary(cars)
+W celu stworzenia opcji globalnych, czyli takich, które bêd¹ dzia³a³y przy ka¿dym kawa³ku kodu, wykorzystujemy formu³ê:
+**knitr::opts_chunk$set(echo = FALSE)**. W tym przypadku wymagamy, by kawa³ki kodu nie pojawia³y siê w raporcie. Opcje globalne mog¹ byæ nadpisane przy konkretnej czêœci kodu.
+
+Wiêcej informacji na temat opcji znajdujê siê [tutaj](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf) oraz [tutaj](https://yihui.name/knitr/options).
+
+
+## Kod wewnêtrzny (Inline Code)
+
+```{r, echo=FALSE}
+x <- function(x) x^3
 ```
 
-## Including Plots
+W czêœci tekstowej równie¿ mo¿na wstawiæ efekty zapisanego wczeœniej kodu. Wystarczy u¿yæ dwukrotnie znaku grawis (backtick) **`**, zaznaczaj¹c na wstêpie u¿ywany jêzyk. Na przyk³ad `r x(2)`. Wynik kodu wewnêtrznego jest nie do rozró¿nienia od reszty tekstu. Formu³y te nie korzystaj¹ z opcji knitr.
 
-You can also embed plots, for example:
 
-```{r pressure, echo=TRUE}
-plot(pressure)
-```
+## Pakiet knitr
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Pakiet **knitr** mo¿e kompilowaæ kod w wielu jêzykach programowania, takich jak: 
+
+* Python
+* SQL
+* Bash
+* Rcpp
+* Stan
+* JavaScript
+* CSS
+
+Wiêcej na ten temat [tutaj](https://rmarkdown.rstudio.com/authoring_knitr_engines.html).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
